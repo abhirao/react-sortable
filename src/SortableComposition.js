@@ -38,7 +38,7 @@ return class Sortable extends React.Component {
 
       let dt = e.dataTransfer;
       if (dt !== undefined) {
-        e.dataTransfer.setData('text', e.target.innerHTML);
+        e.dataTransfer.setData('text', e.target.textContent);
 
         //fix http://stackoverflow.com/questions/27656183/preserve-appearance-of-dragged-a-element-when-using-html5-draggable-attribute
         if (dt.setDragImage && e.currentTarget.tagName.toLowerCase() === 'a') {
